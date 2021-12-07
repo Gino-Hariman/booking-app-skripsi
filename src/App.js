@@ -3,7 +3,7 @@ import StyledForm from "./styles";
 function App() {
   return (
     <StyledForm>
-      <h1 className="font-bold font-sans">Hello</h1>
+      <h1 className="font-bold font-sans text-H1">Hello</h1>
       <form>
         <input type="text" placeholder="Full name" />
         <input type="text" placeholder="Email" />

@@ -1,26 +1,21 @@
 import styled from "styled-components";
-import tw from "twin.macro";
+import tw, { styled as tStyled, theme, css } from "twin.macro";
 
 export const DropdownContainer = styled.div.attrs({
   className: "relative inline-block text-left w-full",
 })``;
 
-export const DropdownButton = styled.button.attrs({
-  className:
-    "inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500",
-})``;
+export const DropdownButton = tStyled.button(({ selected }) => [
+  tw`inline-flex justify-between w-full rounded-full border border-gray-300 shadow-sm px-xl py-md bg-white text-sm font-medium hover:bg-gray-50`,
 
-export const DropdownItemContainer = styled.div.attrs({
+  selected ? tw`text-current` : tw`text-black-20`,
+]);
+
+export const DropdownContent = styled.div.attrs({
   className:
-    "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none",
+    "origin-top-left absolute right-0 mt-5 w-56 w-full rounded-md shadow-md bg-white divide-y divide-black-10 font-sans text-h5 font-medium",
 })``;
 
 export const DropdownItem = styled.div.attrs({
-  className: "py-1",
-})`
-  & {
-    a {
-      ${tw`text-gray-700 block px-4 py-2 text-sm`}
-    }
-  }
-`;
+  className: "py-lg text-gray-700 block px-4 py-2 text-sm cursor-pointer",
+})``;

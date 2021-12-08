@@ -1,12 +1,19 @@
+import { useState } from "react";
 import Dropdown from "./components/Dropdown";
 import TextInput from "./components/TextInput";
 import StyledForm from "./styles";
 
+const options = ["Aryaduta", "Lippo Plaza"];
 function App() {
+  const [selected, setSelected] = useState("");
   return (
     <>
       {/* <TextInput /> */}
-      <Dropdown />
+      <Dropdown
+        selected={selected}
+        setSelected={setSelected}
+        options={options}
+      />
     </>
 
     // <StyledForm>

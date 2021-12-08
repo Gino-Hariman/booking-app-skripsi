@@ -1,38 +1,38 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import {
-  DropdownItemContainer,
+  DropdownContent,
   DropdownItem,
   DropdownContainer,
   DropdownButton,
 } from "./styles";
 
-const Dropdown = () => {
-  const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
-  const btnDropdownRef = useRef();
-  const popoverDropdownRef = useRef();
+const Dropdown = ({ selected, setSelected, options }) => {
+  const [isActive, setIsActive] = useState(false);
 
-  const openDropdownPopover = () => {
-    createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
-      placement: "bottom-start",
-    });
-    setDropdownPopoverShow(true);
+  const handleOpenDropdown = () => {
+    setIsActive((prev) => !prev);
   };
-  const closeDropdownPopover = () => {
-    setDropdownPopoverShow(false);
+
+  const handleSelectItem = (item) => {
+    console.log("item", item);
+    setSelected(item);
+    setIsActive(false);
   };
 
   return (
     <DropdownContainer>
       <div>
         <DropdownButton
+          selected={selected}
           type="button"
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
+          onClick={handleOpenDropdown}
         >
-          Options
+          {selected ? selected : "Select Campus Location"}
           <svg
-            class="-mr-1 ml-2 h-5 w-5"
+            className="-mr-1 ml-2 h-5 w-5 fill-current text-black-100"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -47,21 +47,22 @@ const Dropdown = () => {
         </DropdownButton>
       </div>
 
-      <DropdownItemContainer
-        role="menu"
-        aria-orientation="vertical"
-        aria-labelledby="menu-button"
-        tabindex="-1"
-      >
-        <DropdownItem role="none">
-          <a href="#" role="menuitem" id="menu-item-0">
-            Edit
-          </a>
-          <a href="#" role="menuitem" id="menu-item-1">
-            Duplicate
-          </a>
-        </DropdownItem>
-      </DropdownItemContainer>
+      {isActive && (
+        <DropdownContent
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+        >
+          {options.map((option) => (
+            <DropdownItem
+              role="menuitem"
+              onClick={() => handleSelectItem(option)}
+            >
+              {option}
+            </DropdownItem>
+          ))}
+        </DropdownContent>
+      )}
     </DropdownContainer>
   );
 };

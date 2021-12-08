@@ -1,9 +1,13 @@
+import Dropdown from "./components/Dropdown";
 import TextInput from "./components/TextInput";
 import StyledForm from "./styles";
 
 function App() {
   return (
-    <TextInput />
+    <>
+      {/* <TextInput /> */}
+      <Dropdown />
+    </>
 
     // <StyledForm>
     //   <h1 className="font-bold font-sans text-H1">Hello</h1>

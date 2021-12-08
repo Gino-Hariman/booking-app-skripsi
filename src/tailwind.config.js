@@ -70,6 +70,12 @@ module.exports = {
         full: "9999px",
         large: "12px",
       },
+      spacing: {
+        sm: "8px",
+        md: "16px",
+        lg: "24px",
+        xl: "34px",
+      },
     },
   },
   variants: {

@@ -45,5 +45,11 @@
     "postcss-cli": "^9.0.2",
     "tailwindcss": "^2.2.19",
     "twin.macro": "^2.8.1"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./src/tailwind.config.js",
+      "preset": "styled-components"
+    }
   }
 }

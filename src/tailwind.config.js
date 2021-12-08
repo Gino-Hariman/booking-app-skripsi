@@ -32,6 +32,7 @@ module.exports = {
           20: "#CCCCCC",
           10: "#E6E6E6",
         },
+        primary: "#315DD1",
         danger: {
           main: "#F11414",
           surface: "#FFE9E9",
@@ -75,6 +76,7 @@ module.exports = {
         md: "16px",
         lg: "24px",
         xl: "34px",
+        "2xl": "47px",
       },
     },
   },

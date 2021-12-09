@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./components/Button";
 import Dropdown from "./components/Dropdown";
+import OTPInput from "./components/OTPInput";
 import TextInput from "./components/TextInput";
 import StyledForm from "./styles";
 
@@ -10,12 +11,21 @@ function App() {
   return (
     <>
       {/* <TextInput /> */}
-      <Dropdown
+      {/* <Dropdown
         selected={selected}
         setSelected={setSelected}
         options={options}
       />
-      <Button text={"Find Now"} handleClick={() => console.log("tesst")} />
+      <Button text={"Find Now"} handleClick={() => console.log("tesst")} /> */}
+
+      <div>
+        - Number OTP:
+        <OTPInput
+          autoFocus
+          length={6}
+          onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
+        />
+      </div>
     </>
 
     // <StyledForm>

@@ -78,6 +78,12 @@ module.exports = {
         xl: "34px",
         "2xl": "47px",
       },
+      padding: {
+        sm: "8px",
+        md: "16px",
+        lg: "20px",
+        xl: "48px",
+      },
     },
   },
   variants: {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./components/Button";
 import Dropdown from "./components/Dropdown";
+import ListTime from "./components/ListTime/index.jsx";
 import OTPInput from "./components/OTPInput";
 import TextInput from "./components/TextInput";
 import StyledForm from "./styles";
@@ -26,6 +27,7 @@ function App() {
           onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
         />
       </div>
+      <ListTime />
     </>
 
     // <StyledForm>

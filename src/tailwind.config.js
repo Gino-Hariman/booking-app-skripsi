@@ -19,7 +19,6 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        current: "currentColor",
         black: {
           100: "#000000",
           90: "#1A1A1A",
@@ -71,6 +70,14 @@ module.exports = {
         full: "9999px",
         large: "12px",
       },
+      borderWidth: {
+        DEFAULT: "1px",
+        0: "0",
+        2: "2px",
+        3: "3px",
+        4: "4px",
+        6: "6px",
+      },
       spacing: {
         sm: "8px",
         md: "16px",
@@ -83,6 +90,9 @@ module.exports = {
         md: "16px",
         lg: "20px",
         xl: "48px",
+      },
+      margin: {
+        "16px": "16px",
       },
     },
   },

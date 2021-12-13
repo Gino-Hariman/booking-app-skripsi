@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
 
 /*
-! tailwindcss v3.0.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.0 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -658,4 +658,10 @@ h6 {
 .hover\:bg-black-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(128 128 128 / var(--tw-bg-opacity));
+}
+
+
+.focus\:bg-primary:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 93 209 / var(--tw-bg-opacity));
 }

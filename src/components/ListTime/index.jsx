@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckBox from "./Checkbox";
 import { ItemContainer, ListTimeContainer, ListTitle } from "./styles";
 
@@ -12,12 +12,24 @@ const scheduleTime = [
 ];
 
 const ListTime = () => {
+  const [selectedItem, setSelectedItem] = useState();
+
+  const handleSelect = (id) => {
+    console.log("seleted");
+    setSelectedItem(id);
+  };
+
   return (
     <ListTimeContainer>
       <ListTitle>Morning</ListTitle>
       <ItemContainer>
         {scheduleTime.map(({ startTime, endTime, id }) => (
-          <CheckBox startTime={startTime} endTime={endTime} id={id} />
+          <CheckBox
+            handleSelect={() => handleSelect(id)}
+            startTime={startTime}
+            endTime={endTime}
+            id={id}
+          />
         ))}
       </ItemContainer>
     </ListTimeContainer>

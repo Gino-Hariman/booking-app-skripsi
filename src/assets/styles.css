@@ -504,6 +504,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(49 93 209 / var(--tw-bg-opacity));
 }
+.bg-danger-pressed{
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 3 3 / var(--tw-bg-opacity));
+}
 .py-lg{
   padding-top: 20px;
   padding-bottom: 20px;

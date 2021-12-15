@@ -5,19 +5,21 @@ import ListTime from "./components/ListTime/index.jsx";
 import OTPInput from "./components/OTPInput";
 import TextInput from "./components/TextInput";
 import StyledForm from "./styles";
+import Navbar from "./components/Navbar";
 
 const options = ["Aryaduta", "Lippo Plaza"];
 function App() {
   const [selected, setSelected] = useState("");
   return (
     <>
-      {/* <TextInput /> */}
-      {/* <Dropdown
+      <TextInput />
+      <Dropdown
         selected={selected}
         setSelected={setSelected}
         options={options}
       />
-      <Button text={"Find Now"} handleClick={() => console.log("tesst")} /> */}
+      <Button text={"Find Now"} handleClick={() => console.log("tesst")} />
+      <Navbar />
 
       <div>
         - Number OTP:

@@ -15,7 +15,6 @@ const ListTime = () => {
   const [selectedItem, setSelectedItem] = useState([]);
 
   const handleSelect = (id) => {
-    console.log("seleted");
     const isAlrSelected = selectedItem.includes(id);
 
     if (!isAlrSelected) return setSelectedItem((curr) => [...curr, id]);

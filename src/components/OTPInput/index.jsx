@@ -161,6 +161,8 @@ const OTPInput = ({
         .fill("")
         .map((_, index) => (
           <SingleInput
+            maxlength="1"
+            size="1"
             key={`SingleInput-${index}`}
             type={"text"}
             focus={activeInput === index}

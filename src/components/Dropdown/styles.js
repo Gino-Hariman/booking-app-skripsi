@@ -6,9 +6,9 @@ export const DropdownContainer = styled.div.attrs({
 })``;
 
 export const DropdownButton = tStyled.button(({ selected }) => [
-  tw`inline-flex justify-between w-full rounded-full border border-gray-300 shadow-sm px-xl py-md bg-white text-sm font-medium hover:bg-gray-50`,
+  tw`inline-flex justify-between w-full rounded-full border border-black-30 shadow-sm px-xl py-md bg-white text-H4 font-medium hover:bg-black-50`,
 
-  selected ? tw`text-current` : tw`text-black-20`,
+  selected ? tw`text-black-100` : tw`text-black-20`,
 ]);
 
 export const DropdownContent = styled.div.attrs({
@@ -17,5 +17,5 @@ export const DropdownContent = styled.div.attrs({
 })``;
 
 export const DropdownItem = styled.div.attrs({
-  className: "py-lg text-gray-700 block px-4 py-2 text-sm cursor-pointer",
+  className: "py-lg text-gray-700 block px-4 py-2 text-H4 cursor-pointer",
 })``;

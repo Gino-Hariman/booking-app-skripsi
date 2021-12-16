@@ -432,6 +432,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-1{
   margin-bottom: 0.25rem;
 }
+.mt-14{
+  margin-top: 3.5rem;
+}
 .inline-block{
   display: inline-block;
 }
@@ -447,8 +450,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-5{
   height: 1.25rem;
 }
-.h-8{
-  height: 2rem;
+.h-auto{
+  height: auto;
 }
 .w-full{
   width: 100%;
@@ -467,6 +470,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-auto{
   width: auto;
+}
+.w-2\/5{
+  width: 40%;
 }
 .max-w-xs{
   max-width: 20rem;
@@ -509,6 +515,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .rounded-md{
   border-radius: 0.375rem;
+}
+.rounded-r-md{
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 .border{
   border-width: 1px;
@@ -609,10 +619,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-sans{
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.text-H1{
-  font-size: 3rem;
-  line-height: 72px;
 }
 .text-Body{
   font-size: 1.125rem;

@@ -76,6 +76,9 @@ module.exports = {
     boxShadow: {
       "dark-sm": "0px 10px rgba(0, 0, 0, 0.05)",
     },
+    aspecRatio: {
+      "4/3": "3 / 2",
+    },
   },
   variants: {
     extend: {},

@@ -59,28 +59,22 @@ module.exports = {
       Tag: ["0.875rem", { lineHeight: "21px" }],
       Sub: ["0.75rem", { lineHeight: "18px" }],
     },
-    spacing: {
-      sm: "8px",
-      md: "16px",
-      lg: "24px",
-      xl: "34px",
-      "2xl": "47px",
-    },
-    padding: {
-      sm: "8px",
-      md: "16px",
-      lg: "20px",
-      xl: "48px",
-    },
-    margin: {
-      8: "8px",
-      20: "20px",
-      16: "16px",
-    },
   },
   extend: {
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
+    },
+    spacing: {
+      "48px": "48px",
+    },
+    padding: {
+      "48px": "48px",
+    },
+    margin: {
+      "48px": "48px",
+    },
+    boxShadow: {
+      "dark-sm": "0px 10px rgba(0, 0, 0, 0.05)",
     },
   },
   variants: {

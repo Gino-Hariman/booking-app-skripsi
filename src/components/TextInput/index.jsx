@@ -8,7 +8,6 @@ const TextInput = () => {
         type="email"
         id="email"
         placeholder="Example@student.uph.edu"
-        className="border-2"
       />
     </TextInputContainer>
   );

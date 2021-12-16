@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ButtonContainer = styled.button.attrs({
   className:
-    "bg-primary py-md px-2xl text-H4 font-medium	 text-white rounded-full",
+    "bg-primary px-12 py-3.5 border-transparent text-Body font-medium	text-white rounded-full",
 })``;
 
 export default ButtonContainer;

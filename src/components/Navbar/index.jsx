@@ -1,10 +1,13 @@
 import React from "react";
-import { Container, NavContainer } from "./styles";
+import { Container, NavContainer, NavLogo } from "./styles";
+import Logo from "../../assets/image/logo_uph.png";
 
 const Navbar = () => {
   return (
     <Container>
-      <NavContainer>ini nav</NavContainer>
+      <NavContainer>
+        <NavLogo src={Logo} alt="logo_uph" />
+      </NavContainer>
     </Container>
   );
 };

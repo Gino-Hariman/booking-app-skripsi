@@ -10,5 +10,5 @@ export const Label = styled.label.attrs({
 
 export const StyledTextInput = styled.input.attrs({
   className:
-    "rounded-full px-9 py-3.5 outline-none shadow-lg placeholder-black-20 text-black-40",
+    "rounded-full px-8 py-3 outline-none shadow-lg placeholder-black-20 text-black-40",
 })``;

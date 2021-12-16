@@ -73,6 +73,9 @@ module.exports = {
     margin: {
       "48px": "48px",
     },
+    boxShadow: {
+      "dark-sm": "0px 10px rgba(0, 0, 0, 0.05)",
+    },
   },
   variants: {
     extend: {},

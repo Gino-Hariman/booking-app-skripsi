@@ -1,14 +1,5 @@
 import React from "react";
-import Navbar from "../../../components/Navbar";
-import {
-  Container,
-  ImageContainer,
-  InputContainer,
-  LeftImage,
-  LoginContainer,
-  RightContainer,
-} from "./styles";
-import imgOffice from "../../../assets/image/office.jpg";
+import { InputContainer } from "./styles";
 import { HeaderTitle } from "../styles";
 import DualLayout from "../../../components/DualLayout";
 import Button from "../../../components/Button";

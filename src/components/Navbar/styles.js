@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.nav.attrs({
-  className: "bg-white shadow-2xl items-center justifyCenter",
+  className: "bg-white shadow-2xl items-center ",
 })``;
 
 export const NavContainer = styled.div.attrs({
-  className: "mx-16 px-2 py-5 sm:px-6 lg:px-8",
+  className:
+    "container flex justify-between items-center  px-2 py-5 sm:px-6 sm:mx-10 lg:px-8",
 })``;
 
 export const NavLogo = styled.img.attrs({
-  className: "sm:h-10",
+  className: "h-10",
 })``;

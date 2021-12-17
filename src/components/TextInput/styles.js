@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TextInputContainer = styled.div.attrs({
-  className: "flex flex-col",
+  className: "flex flex-col w-full",
 })``;
 
 export const Label = styled.label.attrs({

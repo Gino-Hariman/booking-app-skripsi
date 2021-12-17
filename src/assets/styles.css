@@ -474,17 +474,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-56{
   width: 14rem;
 }
-.w-4\/5{
-  width: 80%;
-}
-.w-max{
-  width: max-content;
-}
 .w-auto{
   width: auto;
 }
 .w-1\/2{
   width: 50%;
+}
+.w-4\/5{
+  width: 80%;
+}
+.w-max{
+  width: max-content;
 }
 .w-3\/4{
   width: 75%;

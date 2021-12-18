@@ -6,7 +6,7 @@ export const Container = styled.nav.attrs({
 
 export const NavContainer = styled.div.attrs({
   className:
-    "container flex justify-between items-center  px-2 py-5 sm:px-6 sm:mx-10 lg:px-8",
+    "flex justify-between items-center  px-2 py-5 sm:px-6 sm:mx-10 lg:px-8",
 })``;
 
 export const NavLogo = styled.img.attrs({

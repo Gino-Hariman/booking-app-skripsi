@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { capitalize } from "../../helpers/capitalize";
 import {
   DropdownContent,
   DropdownItem,
@@ -14,7 +15,6 @@ const Dropdown = ({ selected, setSelected, options }) => {
   };
 
   const handleSelectItem = (item) => {
-    console.log("item", item);
     setSelected(item);
     setIsActive(false);
   };
@@ -30,7 +30,9 @@ const Dropdown = ({ selected, setSelected, options }) => {
           aria-haspopup="true"
           onClick={handleOpenDropdown}
         >
-          {selected ? selected : "Select Campus Location"}
+          {selected
+            ? capitalize(selected.nama_gedung)
+            : "Select Campus Location"}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-black-100"
@@ -73,7 +75,7 @@ const Dropdown = ({ selected, setSelected, options }) => {
               role="menuitem"
               onClick={() => handleSelectItem(option)}
             >
-              {option}
+              {option.nama_gedung}
             </DropdownItem>
           ))}
         </DropdownContent>

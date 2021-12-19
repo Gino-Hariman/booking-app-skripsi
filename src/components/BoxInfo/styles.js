@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const BoxContainer = styled.div.attrs({
-  className: "flex bg-white",
+  className: "flex bg-white shadow-md",
 })`
   justify-content: space-between;
   align-items: center;

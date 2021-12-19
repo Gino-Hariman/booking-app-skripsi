@@ -11,3 +11,7 @@ export const H4 = styled.h4.attrs({
 export const Body = styled.body.attrs({
   className: "text-Body font-medium",
 })``;
+
+export const Caption = styled.p.attrs({
+  className: "text-Caption font-medium",
+})``;

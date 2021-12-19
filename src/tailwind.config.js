@@ -59,6 +59,11 @@ module.exports = {
       Tag: ["0.875rem", { lineHeight: "21px" }],
       Sub: ["0.75rem", { lineHeight: "18px" }],
     },
+    fontWeight: {
+      normal: 400,
+      semibold: 500,
+      bold: 700,
+    },
   },
   extend: {
     fontFamily: {

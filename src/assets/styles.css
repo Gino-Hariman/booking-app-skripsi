@@ -497,6 +497,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .inline-flex{
   display: inline-flex;
 }
+.table{
+  display: table;
+}
 .hidden{
   display: none;
 }
@@ -692,6 +695,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(49 93 209 / var(--tw-bg-opacity));
 }
+.bg-success-surface{
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 255 231 / var(--tw-bg-opacity));
+}
+.bg-danger-surface{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 233 233 / var(--tw-bg-opacity));
+}
 .object-cover{
   object-fit: cover;
 }
@@ -734,6 +745,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -746,10 +761,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -757,6 +768,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+.pl-12{
+  padding-left: 3rem;
+}
+.pt-5{
+  padding-top: 1.25rem;
 }
 .text-left{
   text-align: left;
@@ -791,14 +808,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
   line-height: 36px;
 }
+.text-H2{
+  font-size: 2.5rem;
+  line-height: 60px;
+}
 .font-bold{
   font-weight: 700;
 }
-.font-medium{
-  font-weight: 500;
-}
 .font-semibold{
-  font-weight: 600;
+  font-weight: 500;
 }
 .capitalize{
   text-transform: capitalize;
@@ -809,6 +827,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-success-main{
+  --tw-text-opacity: 1;
+  color: rgb(39 204 75 / var(--tw-text-opacity));
+}
+.text-danger-main{
+  --tw-text-opacity: 1;
+  color: rgb(241 20 20 / var(--tw-text-opacity));
 }
 .text-black-100{
   --tw-text-opacity: 1;
@@ -960,6 +986,12 @@ h6 {
 .hover\:bg-info-hover:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 72 155 / var(--tw-bg-opacity));
+}
+
+
+.hover\:bg-danger-hover:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 0 0 / var(--tw-bg-opacity));
 }
 
 

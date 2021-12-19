@@ -1,12 +1,18 @@
-import { useState } from "react";
-import Login from "./pages/Authentication/Login";
-import HomePage from "./pages/HomePage";
-import VerifyOTP from "./pages/VerifyOTP";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import Admin from "./pages/admin";
+import tailwindConfig from "./tailwind.config";
+import "./App.css";
 
-const options = ["Aryaduta", "Lippo Plaza"];
-function App() {
-  const [selected, setSelected] = useState("");
-  return <VerifyOTP studentName="gino.uph.edu" />;
-}
+const App = () => (
+  <ThemeProvider theme={tailwindConfig.theme.colors}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;

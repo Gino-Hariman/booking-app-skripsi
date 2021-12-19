@@ -479,6 +479,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-8{
   margin-top: 2rem;
 }
+.mb-6{
+  margin-bottom: 1.5rem;
+}
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -862,6 +865,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .text-opacity-90{
   --tw-text-opacity: 0.9;
+}
+.underline{
+  text-decoration: underline;
 }
 .placeholder-black-20::placeholder{
   --tw-placeholder-opacity: 1;

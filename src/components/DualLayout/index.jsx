@@ -13,7 +13,6 @@ import {
 const DualLayout = ({ children }) => {
   return (
     <LayoutContainer>
-      <Navbar />
       <Container>
         <LeftContainer>
           <LeftImage src={imgOffice} alt="login_image" />

@@ -11,12 +11,7 @@ const Profile = () => {
     email: "mariochandra01@gmail.com",
     prodi: "informatika",
   };
-  const renderItem = () => {
-    Object.entries(dummyData).map((entry) => {
-      const [key, value] = entry;
-      return <ProfileFieldData key={key} label={key} value={value} />;
-    });
-  };
+
   return (
     <ProfileContainer>
       <>

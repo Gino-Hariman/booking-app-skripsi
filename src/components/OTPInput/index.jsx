@@ -1,15 +1,7 @@
 import React, { memo, useState, useCallback } from "react";
 import SingleInput from "./SingleInput";
 
-const OTPInput = ({
-  length,
-  autoFocus,
-  disabled,
-  onChangeOTP,
-  inputStyle,
-  rest,
-  isNumberInput,
-}) => {
+const OTP = ({ length, autoFocus, disabled, onChangeOTP, isNumberInput }) => {
   const [activeInput, setActiveInput] = useState(0);
   const [otpValues, setOTPValues] = useState(Array(length).fill(""));
 
@@ -156,7 +148,7 @@ const OTPInput = ({
   );
 
   return (
-    <div {...rest}>
+    <div>
       {Array(length)
         .fill("")
         .map((_, index) => (
@@ -173,7 +165,6 @@ const OTPInput = ({
             onKeyDown={handleOnKeyDown}
             onBlur={onBlur}
             onPaste={handleOnPaste}
-            style={inputStyle}
             disabled={disabled}
           />
         ))}
@@ -181,5 +172,5 @@ const OTPInput = ({
   );
 };
 
-const customOTP = memo(OTPInput);
-export default customOTP;
+const OTPInput = memo(OTP);
+export default OTPInput;

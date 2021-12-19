@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import DualLayout from "../../components/DualLayout";
 import OTPInput from "../../components/OTPInput";
 import { Body, H1 } from "../../components/Typography";
+import ResendOTP from "../Authentication/Login/ResendOTP";
 
 const VerifyOTP = ({ studentName = "" }) => {
   return (
@@ -10,7 +11,7 @@ const VerifyOTP = ({ studentName = "" }) => {
       <>
         <H1 className="mb-2 text-center">Verify Account</H1>
         <Body className="mb-8 text-black-40 break-words text-center">
-          Enter the verification code that send to <br /> {studentName}
+          Enter the verification code that send to <br /> {studentName}{" "}
         </Body>
         <OTPInput
           isNumberInput
@@ -18,9 +19,10 @@ const VerifyOTP = ({ studentName = "" }) => {
           length={6}
           onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
         />
-        <div className="mt-8">
+        <div className="mt-8 mb-6">
           <Button text={"Continue"} />
         </div>
+        <ResendOTP />
       </>
     </DualLayout>
   );

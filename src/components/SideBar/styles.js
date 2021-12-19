@@ -4,6 +4,11 @@ export const SideBarContainer = styled.div.attrs({
   className: "bg-white font-semibold shadow-md",
 })`
   width: 240px;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 export const MenuText = styled.p.attrs({

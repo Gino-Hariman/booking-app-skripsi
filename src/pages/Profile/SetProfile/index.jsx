@@ -1,23 +1,25 @@
 import React from "react";
-
-import DualLayout from "../../../components/DualLayout";
 import Button from "../../../components/Button";
+import DualLayout from "../../../components/DualLayout";
 import TextInput from "../../../components/TextInput";
-import { H1 } from "../../../components/Typography";
 import { InputContainer } from "../../../components/TextInput/styles";
+import { H1 } from "../../../components/Typography";
 
-const Login = () => {
+const SetProfile = () => {
   return (
     <DualLayout>
       <>
-        <H1>LOGIN</H1>
+        <H1>Input Your Data</H1>
         <InputContainer>
           <TextInput />
+          <TextInput />
+          <TextInput />
+          <TextInput />
         </InputContainer>
-        <Button text="Lanjut" />
+        <Button text="Continue" />
       </>
     </DualLayout>
   );
 };
 
-export default Login;
+export default SetProfile;

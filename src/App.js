@@ -5,6 +5,8 @@ import tailwindConfig from "./tailwind.config";
 import "./App.css";
 import Admin from "./pages/admin";
 import Booking from "./pages/Booking";
+import Profile from "./pages/Profile";
+import SetProfile from "./pages/Profile/SetProfile";
 
 const App = () => (
   <ThemeProvider theme={tailwindConfig.theme.colors}>
@@ -12,6 +14,8 @@ const App = () => (
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/set-profile" element={<SetProfile />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
-export const SpotCardContainer = styled.div.attrs({
-  className: "w-full relative",
+export const SpotCardContainer = styled.button.attrs({
+  className: "w-full relative rounded-lg overflow-hidden",
 })``;
 
 export const SpotCardImage = styled.img.attrs({
-  className: "h-96 w-full rounded-md object-cover ",
+  className: "h-96 w-full object-cover",
 })``;
 
 export const SpotCardDetails = styled.div.attrs({
   className:
-    "w-full absolute py-10 px-7 bottom-0 bg-gradient-to-r from-black-100",
+    "w-full absolute py-10 px-7 bottom-0 bg-gradient-to-r from-black-100 text-left",
 })``;
-
-// w-full rounded-md

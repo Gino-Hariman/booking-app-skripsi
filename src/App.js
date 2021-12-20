@@ -7,11 +7,11 @@ import Admin from "./pages/admin";
 import Booking from "./pages/Booking";
 import Profile from "./pages/Profile";
 import SetProfile from "./pages/Profile/SetProfile";
-import SpotCard from "./components/SpotCard";
+import Spot from "./pages/Spot";
 
 const App = () => (
   <ThemeProvider theme={tailwindConfig.theme.colors}>
-    <SpotCard />
+    <Spot />
     {/* <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<Admin />} />

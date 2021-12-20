@@ -5,7 +5,7 @@ import { Caption, H4 } from "../Typography";
 
 const SpotCard = () => {
   return (
-    <SpotCardContainer>
+    <SpotCardContainer onClick={(id) => console.log("test", id)}>
       <SpotCardImage src={imgOffice} alt="spot image" />
       <SpotCardDetails>
         <H4 className="mb-2 text-white">Aryaduta Spot A</H4>

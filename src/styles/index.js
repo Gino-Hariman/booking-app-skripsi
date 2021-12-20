@@ -17,3 +17,7 @@ const StyledForm = styled.main.attrs({
   }
 `;
 export default StyledForm;
+
+export const Container = styled.div.attrs({
+  className: "w-full h-screen",
+})``;

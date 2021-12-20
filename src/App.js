@@ -8,10 +8,12 @@ import Booking from "./pages/Booking";
 import Profile from "./pages/Profile";
 import SetProfile from "./pages/Profile/SetProfile";
 import Spot from "./pages/Spot";
+import MySeat from "./pages/MySeat";
 
 const App = () => (
   <ThemeProvider theme={tailwindConfig.theme.colors}>
-    <Spot />
+    {/* <Spot /> */}
+    <MySeat />
     {/* <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<Admin />} />

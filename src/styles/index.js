@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import tw from "twin.macro";
+import tw, { styled as tStyled } from "twin.macro";
 
 const StyledForm = styled.main.attrs({
   className: "flex flex-col h-screen justify-center items-center bg-black-10",
@@ -17,6 +17,13 @@ const StyledForm = styled.main.attrs({
   }
 `;
 export default StyledForm;
+
+export const test = tStyled.button(({ selected }) => [
+  tw`inline-flex justify-between w-full rounded-full border border-black-30 shadow-sm px-8 py-3 bg-white 
+  border-0 shadow-lg text-Caption capitalize hover:bg-black-10`,
+
+  selected ? tw`text-black-100` : tw`text-black-20`,
+]);
 
 export const Container = styled.div.attrs({
   className: "w-full h-screen",

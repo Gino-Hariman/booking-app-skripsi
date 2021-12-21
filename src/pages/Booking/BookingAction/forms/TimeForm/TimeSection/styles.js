@@ -13,11 +13,8 @@ export const Title = styled.p.attrs({
 `;
 
 export const ChoiceContainer = styled.div.attrs({
-  className: "flex",
-})`
-  flex-wrap: wrap;
-  margin: 0 -8px;
-`;
+  className: "flex flex-wrap mx-2",
+})``;
 
 export const ChoiceItem = styled.div`
   padding: 0 8px;

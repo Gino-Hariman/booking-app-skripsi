@@ -1,6 +1,6 @@
 import React from "react";
 import SelectTag from "../../../../../../components/SelectTag";
-import { H3 } from "../../../../../../components/Typography";
+import { H5 } from "../../../../../../components/Typography";
 import {
   ChairChoiceContainer,
   ChairChoiceItem,
@@ -9,14 +9,14 @@ import {
 
 const ChairSection = ({ title, chairs, selected, onSelect }) => (
   <ChairSectionContainer>
-    <H3>{title}</H3>
+    <H5>{title}</H5>
     <ChairChoiceContainer>
       {chairs.map((chair) => (
         <ChairChoiceItem key={chair.id}>
           <SelectTag
-            selected={selected.name === chair.name}
+            selected={selected?.name === chair.name}
             onSelect={() => onSelect(chair)}
-            content={chair.name}
+            content={chair?.name}
           />
         </ChairChoiceItem>
       ))}

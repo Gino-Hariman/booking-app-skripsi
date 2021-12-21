@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+// export const PreviewContainer = styled.div`
+//   position: relative;
+//   overflow: hidden;
+//   height: 100%;
+//   min-height: 200px;
+//   padding-top: 100px;
+//   border-radius: 10px;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
+// `;
+
 export const PreviewContainer = styled.div`
   position: relative;
   overflow: hidden;

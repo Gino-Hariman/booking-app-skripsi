@@ -9,7 +9,7 @@ const TimeSection = ({ title, times, selected, onSelect }) => (
       {times.map((time) => (
         <ChoiceItem key={time.start}>
           <SelectTag
-            selected={selected?.start === time.start}
+            selected={selected.find((item) => item.id === time.id)}
             onSelect={() => onSelect(time)}
             content={`${time.start} - ${time.end}`}
           />

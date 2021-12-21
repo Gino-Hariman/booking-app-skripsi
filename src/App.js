@@ -13,15 +13,14 @@ import MySeat from "./pages/MySeat";
 const App = () => (
   <ThemeProvider theme={tailwindConfig.theme.colors}>
     {/* <Spot /> */}
-    <MySeat />
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/set-profile" element={<SetProfile />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
   </ThemeProvider>
 );
 

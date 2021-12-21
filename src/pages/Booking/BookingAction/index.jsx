@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ActionForm from "./ActionForm";
+import ChairForm from "./forms/ChairForm";
 import DateForm from "./forms/DateForm";
 import TimeForm from "./forms/TimeForm";
 
@@ -15,6 +16,12 @@ const STEPS = [
     title: "Book Time",
     actionName: "Choose Time",
     form: TimeForm,
+  },
+  {
+    id: "chair",
+    title: "Book Time",
+    actionName: "Choose Time",
+    form: ChairForm,
   },
 ];
 

@@ -8,6 +8,10 @@ export const H4 = styled.h4.attrs({
   className: "text-H4 font-medium",
 })``;
 
+export const H3 = styled.h3.attrs({
+  className: "text-H3 font-medium",
+})``;
+
 export const Body = styled.body.attrs({
   className: "text-Body font-medium",
 })``;

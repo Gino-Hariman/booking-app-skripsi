@@ -501,6 +501,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-1{
   margin-bottom: 0.25rem;
 }
+.-mt-20{
+  margin-top: -5rem;
+}
 .mb-12{
   margin-bottom: 3rem;
 }
@@ -546,6 +549,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen{
   height: 100vh;
 }
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .h-5{
   height: 1.25rem;
 }
@@ -563,6 +570,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-96{
   height: 24rem;
+}
+.h-12{
+  height: 3rem;
 }
 .max-h-full{
   max-height: 100%;
@@ -599,6 +609,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-9\/12{
   width: 75%;
+}
+.w-12{
+  width: 3rem;
 }
 .w-80{
   width: 20rem;
@@ -959,6 +972,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black-50{
   --tw-text-opacity: 1;
   color: rgb(128 128 128 / var(--tw-text-opacity));
+}
+.text-black-90{
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity));
 }
 .text-opacity-90{
   --tw-text-opacity: 0.9;

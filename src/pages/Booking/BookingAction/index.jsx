@@ -19,7 +19,7 @@ const STEPS = [
   },
   {
     id: "chair",
-    title: "Book Time",
+    title: "Book Chair",
     actionName: "Choose Time",
     form: ChairForm,
   },

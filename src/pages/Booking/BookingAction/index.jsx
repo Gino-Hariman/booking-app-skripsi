@@ -31,9 +31,9 @@ const BookingAction = () => {
   const navigate = useNavigate();
   const [currStep, setCurrStep] = useState(0);
   const [values, setValues] = useState(() => {
-    const { selectedLocation } = location.state;
+    const state = location.state;
     return {
-      location: selectedLocation,
+      location: state?.selectedLocation,
     };
   });
 

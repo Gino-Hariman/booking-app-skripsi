@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.nav.attrs({
-  className: "bg-white shadow-2xl items-center ",
+export const Container = styled.button.attrs({
+  className: "w-full bg-white shadow-2xl items-center ",
 })``;
 
 export const NavContainer = styled.div.attrs({

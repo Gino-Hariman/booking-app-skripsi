@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
 import { H1, H4 } from "../../components/Typography";
 import { buildingOptions } from "../../Data/buildingOptions";
@@ -7,6 +7,10 @@ import BackgroundImage from "../../components/BackgroundImage";
 
 const HomePage = () => {
   const [selected, setSelected] = useState("");
+
+  useEffect(() => {
+    localStorage.getItem("login_token");
+  }, []);
 
   return (
     <BackgroundImage imgUrl={img}>

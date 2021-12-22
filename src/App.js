@@ -7,15 +7,16 @@ import Admin from "./pages/admin";
 import Booking from "./pages/Booking";
 import Profile from "./pages/Profile";
 import SetProfile from "./pages/Profile/SetProfile";
-import Spot from "./pages/Spot";
-import MySeat from "./pages/MySeat";
+
 import HomePage from "./pages/HomePage";
 import BookingProcessing from "./pages/Booking/BookingProcessing";
+import Navbar from "./components/Navbar";
 
 const App = () => (
   <ThemeProvider theme={tailwindConfig.theme.colors}>
     {/* <Spot /> */}
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/book/processing" element={<BookingProcessing />} />

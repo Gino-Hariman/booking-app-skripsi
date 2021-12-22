@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { capitalize } from "../../helpers/capitalize";
 import {
   DropdownContent,
   DropdownItem,
@@ -7,7 +6,7 @@ import {
   DropdownButton,
 } from "./styles";
 
-const Dropdown = ({ selected, setSelected, options }) => {
+const Dropdown = ({ selected, onSelect, options }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleOpenDropdown = () => {
@@ -15,7 +14,7 @@ const Dropdown = ({ selected, setSelected, options }) => {
   };
 
   const handleSelectItem = (item) => {
-    setSelected(item);
+    onSelect(item);
     setIsActive(false);
   };
 

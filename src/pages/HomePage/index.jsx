@@ -4,13 +4,19 @@ import { H1, H4 } from "../../components/Typography";
 import { buildingOptions } from "../../Data/buildingOptions";
 import img from "../../assets/image/bg_img.png";
 import BackgroundImage from "../../components/BackgroundImage";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState("");
 
   useEffect(() => {
     localStorage.getItem("login_token");
   }, []);
+
+  const handleSelect = (item) => {
+    navigate("/booking", { state: { selectedLocation: item } });
+  };
 
   return (
     <BackgroundImage imgUrl={img}>
@@ -22,7 +28,7 @@ const HomePage = () => {
         </H4>
         <Dropdown
           selected={selected}
-          setSelected={setSelected}
+          onSelect={handleSelect}
           options={buildingOptions}
         />
       </div>

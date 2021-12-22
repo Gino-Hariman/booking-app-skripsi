@@ -15,25 +15,23 @@ import Login from "./pages/Authentication/Login";
 import VerifyOTP from "./pages/VerifyOTP";
 import Spot from "./pages/Spot";
 
-const App = () => {
-  return (
-    <ThemeProvider theme={tailwindConfig.theme.colors}>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/verify-otp" element={<VerifyOTP />} />
-          <Route path="/book/processing" element={<BookingProcessing />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/set-profile" element={<SetProfile />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/spot" element={<Spot />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  );
-};
+const App = () => (
+  <ThemeProvider theme={tailwindConfig.theme.colors}>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/verify-otp" element={<VerifyOTP />} />
+        <Route path="/booking/processing" element={<BookingProcessing />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/set-profile" element={<SetProfile />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/spot" element={<Spot />} />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;

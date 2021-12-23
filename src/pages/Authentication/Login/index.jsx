@@ -8,6 +8,7 @@ import { InputContainer } from "../../../components/TextInput/styles";
 import { userLogin } from "../../../api/apis";
 import usePOST from "../../../hooks/usePOST";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../../components/Navbar";
 
 const Login = () => {
   const navigation = useNavigate();
@@ -32,15 +33,18 @@ const Login = () => {
 
   console.log("inputData", inputData);
   return (
-    <DualLayout>
-      <>
-        <H1>LOGIN</H1>
-        <InputContainer>
-          <TextInput inputData={inputData} setInputData={setInputData} />
-        </InputContainer>
-        <Button onClick={handleLogin} text="Lanjut" />
-      </>
-    </DualLayout>
+    <>
+      <Navbar />
+      <DualLayout>
+        <>
+          <H1>LOGIN</H1>
+          <InputContainer>
+            <TextInput inputData={inputData} setInputData={setInputData} />
+          </InputContainer>
+          <Button onClick={handleLogin} text="Lanjut" />
+        </>
+      </DualLayout>
+    </>
   );
 };
 

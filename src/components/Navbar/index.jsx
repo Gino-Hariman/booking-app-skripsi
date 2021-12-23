@@ -22,10 +22,10 @@ const Navbar = ({ onClick }) => {
     navigate("/login");
   };
   return (
-    <Container onClick={handleLogin}>
+    <Container>
       <NavContainer>
         <NavLogo src={Logo} alt="logo_uph" />
-        {login ? <LoggedButton /> : <LoginButton />}
+        {login ? <LoggedButton /> : <LoginButton onClick={handleLogin} />}
       </NavContainer>
     </Container>
   );

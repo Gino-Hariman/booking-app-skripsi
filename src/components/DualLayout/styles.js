@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LayoutContainer = styled.div.attrs({
-  className: "flex flex-col flex-1 w-auto h-screen max-h-full",
+  className: "flex flex-col max-h-screen  w-auto bg-primary ",
 })``;
 
 export const LeftContainer = styled.div.attrs({

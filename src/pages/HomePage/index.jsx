@@ -5,17 +5,28 @@ import { buildingOptions } from "../../Data/buildingOptions";
 import img from "../../assets/image/bg_img.png";
 import BackgroundImage from "../../components/BackgroundImage";
 import { useNavigate } from "react-router-dom";
+import useGET from "../../hooks/useGET";
 
 const HomePage = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
 
-  useEffect(() => {
-    localStorage.getItem("login_token");
-  }, []);
+  // useEffect(() => {
+  //   localStorage.getItem("login_token");
+  // }, []);
+
+  const { data, isFetching } = useGET({
+    path: "/lantai",
+    errorCallback: (err) => console.log("err", err),
+  });
+
+  console.log("lantai", data);
 
   const handleSelect = (item) => {
-    navigate("/booking", { state: { selectedLocation: item } });
+    if (localStorage.getItem("login_token")) {
+      return navigate("/booking", { state: { selectedLocation: item } });
+    }
+    return navigate("/login");
   };
 
   return (

@@ -3,7 +3,7 @@ import Session from "./auth";
 import instanceMain from "./instances";
 import { createHttpConfig } from "./utils";
 
-const get = async ({
+export const get = async ({
   instance = instanceMain,
   path,
   config,
@@ -13,6 +13,7 @@ const get = async ({
   finalCallback = () => {},
   redirectOn401 = true,
 }) => {
+  setFetch(true);
   const httpConfig = await createHttpConfig(config);
 
   instance
@@ -31,13 +32,12 @@ const get = async ({
     })
     .finally(() => {
       setFetch(false);
-      finalCallback();
+      // finalCallback();
     });
 };
 
 export const GET = ({
   path,
-  config = {},
   callback,
   setFetch = () => {},
   errorCallback = () => {},
@@ -45,7 +45,6 @@ export const GET = ({
 }) => {
   get({
     instance: instanceMain,
-    config,
     path,
     callback,
     setFetch,

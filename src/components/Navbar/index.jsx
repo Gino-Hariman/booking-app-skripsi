@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/image/logo_uph.png";
 import LoggedButton from "./components/LoggedButton";
 import LoginButton from "./components/LoginButton";
-import Session from "../../api/auth";
 
 const Navbar = ({ onClick }) => {
   const [login, setLogin] = useState(false);
@@ -24,7 +23,9 @@ const Navbar = ({ onClick }) => {
   return (
     <Container>
       <NavContainer>
-        <NavLogo src={Logo} alt="logo_uph" />
+        <button onClick={() => navigate("/")}>
+          <NavLogo src={Logo} alt="logo_uph" />
+        </button>
         {login ? <LoggedButton /> : <LoginButton onClick={handleLogin} />}
       </NavContainer>
     </Container>

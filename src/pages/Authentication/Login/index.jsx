@@ -34,7 +34,6 @@ const Login = () => {
   console.log("inputData", inputData);
   return (
     <>
-      <Navbar />
       <DualLayout>
         <>
           <H1>LOGIN</H1>

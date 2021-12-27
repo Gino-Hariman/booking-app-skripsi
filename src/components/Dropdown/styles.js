@@ -19,5 +19,5 @@ export const DropdownContent = styled.div.attrs({
 
 export const DropdownItem = styled.div.attrs({
   className:
-    "py-5 px-9 text-black-40 text-Body first-letter:uppercase cursor-pointer",
+    "p-5 text-black-40 text-Body first-letter:uppercase cursor-pointer",
 })``;

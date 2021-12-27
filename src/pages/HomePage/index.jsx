@@ -1,12 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
 import { H1, H4 } from "../../components/Typography";
 import { buildingOptions } from "../../Data/buildingOptions";
 import img from "../../assets/image/bg_img.png";
 import BackgroundImage from "../../components/BackgroundImage";
+import { useNavigate } from "react-router-dom";
+import useGET from "../../hooks/useGET";
+import Loading from "../../components/Loading";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState("");
+
+  useEffect(() => {
+    if (!localStorage.getItem("login_token")) return navigate("/login");
+  }, []);
+
+  const { data, isFetching } = useGET({
+    path: "/lantai",
+    errorCallback: (err) => console.log("err", err),
+  });
+
+  console.log(
+    'localStorage.getItem("login_token")',
+    localStorage.getItem("login_token")
+  );
+  const handleSelect = (item) => {
+    console.log("item", item);
+
+    if (localStorage.getItem("login_token")) {
+      console.log("masuk");
+      return navigate("/booking", { state: { selectedLocation: item } });
+    }
+    return navigate("/login");
+  };
+
+  if (isFetching) return <Loading />;
 
   return (
     <BackgroundImage imgUrl={img}>
@@ -16,11 +45,7 @@ const HomePage = () => {
           Now available <span className="text-primary">15 seat</span> today at
           UPH Lippo Plaza, Book yours Now
         </H4>
-        <Dropdown
-          selected={selected}
-          setSelected={setSelected}
-          options={buildingOptions}
-        />
+        <Dropdown selected={selected} onSelect={handleSelect} options={data} />
       </div>
     </BackgroundImage>
   );

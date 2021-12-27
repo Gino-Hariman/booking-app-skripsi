@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ActionForm from "./ActionForm";
 import ChairForm from "./forms/ChairForm";
 import DateForm from "./forms/DateForm";
@@ -26,15 +27,26 @@ const STEPS = [
 ];
 
 const BookingAction = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [currStep, setCurrStep] = useState(0);
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState(() => {
+    const state = location.state;
+    return {
+      location: state?.selectedLocation,
+    };
+  });
 
   const form = STEPS[currStep];
 
   const handleChange = (value) =>
     setValues((curr) => ({ ...curr, [form.id]: value }));
 
-  const handleSubmit = () => setCurrStep((curr) => curr + 1);
+  const handleSubmit = () => {
+    if (currStep + 1 < STEPS.length) return setCurrStep((curr) => curr + 1);
+    // do submission
+    return navigate("processing", { replace: true });
+  };
 
   return (
     <ActionForm

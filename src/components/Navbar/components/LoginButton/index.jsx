@@ -1,9 +1,9 @@
 import React from "react";
 import { LoginButtonContainer, LoginButtonText } from "./styles";
 
-const LoginButton = () => {
+const LoginButton = ({ onClick }) => {
   return (
-    <LoginButtonContainer>
+    <LoginButtonContainer onClick={onClick}>
       <LoginButtonText>Login</LoginButtonText>
     </LoginButtonContainer>
   );

@@ -5,6 +5,12 @@ import instanceMain from "../instances";
 
 moment.extend(utc);
 
+const TOKEN_NAME = process.env.REACT_APP_USER_DATA_TOKEN_NAME;
+
+let user;
+
+const getUserCookie = () => Cookies.get(TOKEN_NAME);
+
 const Session = {
   setUserFromCookie: () => {
     try {
@@ -24,6 +30,7 @@ const Session = {
       return null;
     }
   },
+
   isUser: () => {
     if (!user) Session.getUser();
     return user && user.customerid;

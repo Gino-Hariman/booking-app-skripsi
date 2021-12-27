@@ -16,6 +16,10 @@ const Login = () => {
   const { handlePOST, isPOSTING } = usePOST({
     path: userLogin,
     callback: (res) => {
+      console.log("res", res);
+      if (res.type === "error") {
+        console.log("error message", res.message);
+      }
       if (res.type === "success") {
         navigation("/verify-otp", {
           state: {

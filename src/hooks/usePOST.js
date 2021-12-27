@@ -17,7 +17,6 @@ const usePOST = ({
   const cancelRef = useRef({ cancel: () => {} });
 
   const handlePOST = (body) => {
-    console.log("instanceMain", instanceMain);
     if (!isPOSTING) {
       const { CancelToken } = axios;
       const source = CancelToken.source();

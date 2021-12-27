@@ -12,23 +12,27 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
 
-  // useEffect(() => {
-  //   localStorage.getItem("login_token");
-  // }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("login_token")) return navigate("/login");
+  }, []);
 
   const { data, isFetching } = useGET({
     path: "/lantai",
     errorCallback: (err) => console.log("err", err),
   });
 
-  console.log("lantai", data);
-
+  console.log(
+    'localStorage.getItem("login_token")',
+    localStorage.getItem("login_token")
+  );
   const handleSelect = (item) => {
     console.log("item", item);
-    // if (localStorage.getItem("login_token")) {
-    //   return navigate("/booking", { state: { selectedLocation: item } });
-    // }
-    // return navigate("/login");
+
+    if (localStorage.getItem("login_token")) {
+      console.log("masuk");
+      return navigate("/booking", { state: { selectedLocation: item } });
+    }
+    return navigate("/login");
   };
 
   if (isFetching) return <Loading />;

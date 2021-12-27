@@ -17,7 +17,6 @@ const Navbar = ({ onClick }) => {
   }, []);
 
   const handleLogin = () => {
-    console.log("login in");
     navigate("/login");
   };
   return (

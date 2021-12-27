@@ -72,7 +72,9 @@ const Dropdown = ({ selected, onSelect, options }) => {
               role="menuitem"
               onClick={() => handleSelectItem(option)}
             >
-              {option.nama_gedung}
+              <div className="capitalize">
+                {option.nama_gedung} lantai {option.nama_lantai}
+              </div>
             </DropdownItem>
           ))}
         </DropdownContent>

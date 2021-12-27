@@ -32,7 +32,7 @@ export const get = async ({
     })
     .finally(() => {
       setFetch(false);
-      // finalCallback();
+      finalCallback();
     });
 };
 

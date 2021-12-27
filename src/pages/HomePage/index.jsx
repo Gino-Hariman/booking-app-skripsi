@@ -6,6 +6,7 @@ import img from "../../assets/image/bg_img.png";
 import BackgroundImage from "../../components/BackgroundImage";
 import { useNavigate } from "react-router-dom";
 import useGET from "../../hooks/useGET";
+import Loading from "../../components/Loading";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -23,11 +24,14 @@ const HomePage = () => {
   console.log("lantai", data);
 
   const handleSelect = (item) => {
-    if (localStorage.getItem("login_token")) {
-      return navigate("/booking", { state: { selectedLocation: item } });
-    }
-    return navigate("/login");
+    console.log("item", item);
+    // if (localStorage.getItem("login_token")) {
+    //   return navigate("/booking", { state: { selectedLocation: item } });
+    // }
+    // return navigate("/login");
   };
+
+  if (isFetching) return <Loading />;
 
   return (
     <BackgroundImage imgUrl={img}>
@@ -37,11 +41,7 @@ const HomePage = () => {
           Now available <span className="text-primary">15 seat</span> today at
           UPH Lippo Plaza, Book yours Now
         </H4>
-        <Dropdown
-          selected={selected}
-          onSelect={handleSelect}
-          options={buildingOptions}
-        />
+        <Dropdown selected={selected} onSelect={handleSelect} options={data} />
       </div>
     </BackgroundImage>
   );

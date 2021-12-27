@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import instanceMain from "../api/instances";
 
 import axios from "axios";
-import { get, GET } from "../api/GET";
+import { get } from "../api/GET";
 
 const useGET = ({
   initial = null,
@@ -11,7 +11,7 @@ const useGET = ({
   path,
   config = {},
   errorCallback = () => {},
-  finalCallback = {},
+  finalCallback = () => {},
   redirectOn401,
   delay = 0,
 }) => {
@@ -24,6 +24,7 @@ const useGET = ({
   finalCallbackRef.current = finalCallback;
   const delayRef = useRef(0);
   delayRef.current = delay;
+
   useEffect(() => {
     const { CancelToken } = axios;
     const source = CancelToken.source();
@@ -35,6 +36,9 @@ const useGET = ({
           path,
           config: {
             cancelToken: source.token,
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("login_token")}`,
+            },
             ...configRef.current,
           },
           callback: (res) => {

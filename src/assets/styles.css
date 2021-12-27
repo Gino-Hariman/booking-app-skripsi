@@ -562,14 +562,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-5\/6{
   height: 83.333333%;
 }
-.h-6{
-  height: 1.5rem;
-}
 .h-10{
   height: 2.5rem;
 }
 .h-96{
   height: 24rem;
+}
+.h-6{
+  height: 1.5rem;
 }
 .h-12{
   height: 3rem;
@@ -595,9 +595,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-1\/2{
   width: 50%;
 }
-.w-6{
-  width: 1.5rem;
-}
 .w-4\/5{
   width: 80%;
 }
@@ -606,6 +603,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-3\/4{
   width: 75%;
+}
+.w-6{
+  width: 1.5rem;
 }
 .w-9\/12{
   width: 75%;
@@ -947,14 +947,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(204 204 204 / var(--tw-text-opacity));
 }
-.text-success-main{
-  --tw-text-opacity: 1;
-  color: rgb(39 204 75 / var(--tw-text-opacity));
-}
-.text-danger-main{
-  --tw-text-opacity: 1;
-  color: rgb(241 20 20 / var(--tw-text-opacity));
-}
 .text-black-40{
   --tw-text-opacity: 1;
   color: rgb(153 153 153 / var(--tw-text-opacity));
@@ -971,9 +963,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(49 93 209 / var(--tw-text-opacity));
 }
+.text-danger-main{
+  --tw-text-opacity: 1;
+  color: rgb(241 20 20 / var(--tw-text-opacity));
+}
 .text-success-hover{
   --tw-text-opacity: 1;
   color: rgb(20 158 50 / var(--tw-text-opacity));
+}
+.text-success-main{
+  --tw-text-opacity: 1;
+  color: rgb(39 204 75 / var(--tw-text-opacity));
 }
 .text-black-50{
   --tw-text-opacity: 1;

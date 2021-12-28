@@ -24,7 +24,7 @@ const Notification = (type, title, message, duration) => {
     document.body.appendChild(el);
   }
 
-  ReactDom.render(
+  ReactDOM.render(
     <Notif
       title={title}
       message={message}

@@ -1,8 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap");
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer components {
+  .success {
+    @apply bg-success-border font-bold text-Caption shadow-md text-success-hover;
+  }
+  .warning {
+    @apply bg-warning-border font-bold text-Caption shadow-md text-warning-hover;
+  }
+  .loading {
+    @apply bg-info-border font-bold text-Caption shadow-md text-info-hover;
+  }
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 blockquote,
 dl,
@@ -26,7 +42,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 
 h1,
 h2,

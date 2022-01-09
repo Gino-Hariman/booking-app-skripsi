@@ -9,17 +9,17 @@ import {
 import { ThemeProvider } from "styled-components";
 import tailwindConfig from "./tailwind.config";
 import "./App.css";
-import Admin from "./pages/admin";
-import Booking from "./pages/Booking";
-import Profile from "./pages/Profile";
-import SetProfile from "./pages/Profile/SetProfile";
+// import Admin from "./pages/admin";
+// import Booking from "./pages/Booking";
+// import Profile from "./pages/Profile";
+// import SetProfile from "./pages/Profile/SetProfile";
 
-import HomePage from "./pages/HomePage";
-import BookingProcessing from "./pages/Booking/BookingProcessing";
+// import HomePage from "./pages/HomePage";
+// import BookingProcessing from "./pages/Booking/BookingProcessing";
 import Navbar from "./components/Navbar";
-import Login from "./pages/Authentication/Login";
-import VerifyOTP from "./pages/VerifyOTP";
-import Spot from "./pages/Spot";
+// import Login from "./pages/Authentication/Login";
+// import VerifyOTP from "./pages/VerifyOTP";
+// import Spot from "./pages/Spot";
 import useAuth from "./hooks/useAuth";
 import Loading from "./components/Loading";
 // import Spot from "./pages/Booking/BookingAction/forms/Spot";
@@ -34,6 +34,18 @@ const RequireAuth = ({ children }) => {
     <Navigate to="/login" replace state={{ path: location.pathname }} />
   );
 };
+
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+const Login = React.lazy(() => import("./pages/Authentication/Login"));
+const VerifyOTP = React.lazy(() => import("./pages/VerifyOTP"));
+const Admin = React.lazy(() => import("./pages/admin"));
+const Booking = React.lazy(() => import("./pages/Booking"));
+const BookingProcessing = React.lazy(() =>
+  import("./pages/Booking/BookingProcessing")
+);
+const SetProfile = React.lazy(() => import("./pages/Profile/SetProfile"));
+const Profile = React.lazy(() => import("./pages/Profile"));
+const Spot = React.lazy(() => import("./pages/Spot"));
 
 const App = () => {
   const state = useAuth();

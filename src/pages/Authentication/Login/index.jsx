@@ -7,13 +7,15 @@ import { H1 } from "../../../components/Typography";
 import { InputContainer } from "../../../components/TextInput/styles";
 import { userLogin } from "../../../api/apis";
 import usePOST from "../../../hooks/usePOST";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../../components/Navbar";
 import Notification from "../../../components/Notification";
+import Loading from "../../../components/Loading";
 
 const Login = () => {
   const navigation = useNavigate();
   const [inputData, setInputData] = useState("");
+  const { state } = useLocation();
   const { handlePOST, isPOSTING } = usePOST({
     path: userLogin,
     callback: (res) => {
@@ -25,6 +27,7 @@ const Login = () => {
         navigation("/verify-otp", {
           state: {
             token: res?.token,
+            path: state?.path,
           },
         });
       }
@@ -33,10 +36,11 @@ const Login = () => {
   });
 
   const handleLogin = () => {
-    handlePOST({ nim: inputData });
+    handlePOST({ email: inputData });
   };
 
-  console.log("inputData", inputData);
+  if (isPOSTING) return <Loading />;
+
   return (
     <>
       <DualLayout>

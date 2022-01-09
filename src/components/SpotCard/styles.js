@@ -5,7 +5,7 @@ export const SpotCardContainer = styled.button.attrs({
 })``;
 
 export const SpotCardImage = styled.img.attrs({
-  className: "h-96 w-full object-cover",
+  className: "h-96 w-full min-w-[344px] object-cover",
 })``;
 
 export const SpotCardDetails = styled.div.attrs({

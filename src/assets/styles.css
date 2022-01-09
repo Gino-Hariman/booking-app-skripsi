@@ -662,6 +662,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -moz-fit-content;
   width: fit-content;
 }
+.min-w-\[344px\]{
+  min-width: 344px;
+}
 .min-w-max{
   min-width: max-content;
 }

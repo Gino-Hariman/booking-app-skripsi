@@ -12,11 +12,11 @@ const ChairSection = ({ title, chairs, selected, onSelect }) => (
     <H5>{title}</H5>
     <ChairChoiceContainer>
       {chairs.map((chair) => (
-        <ChairChoiceItem key={chair.id}>
+        <ChairChoiceItem key={chair.id_kursi}>
           <SelectTag
-            selected={selected?.name === chair.name}
+            selected={selected?.nama_kursi === chair.nama_kursi}
             onSelect={() => onSelect(chair)}
-            content={chair?.name}
+            content={chair?.nama_kursi}
           />
         </ChairChoiceItem>
       ))}

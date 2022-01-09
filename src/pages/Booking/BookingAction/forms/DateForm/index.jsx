@@ -6,11 +6,11 @@ import CalendarPicker from "@mui/lab/CalendarPicker";
 import DateContainer from "./styles";
 
 const DateForm = ({ onChange }) => {
-  const [selectedDate, setSelectedDate] = useState(dayjs());
+  const [selectedDate, setSelectedDate] = useState(dayjs().add(1, "day"));
 
   useEffect(() => {
     onChange(selectedDate);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -19,6 +19,7 @@ const DateForm = ({ onChange }) => {
         <CalendarPicker
           minDate={dayjs()}
           showTodayButton
+          shouldDisableDate={(date) => date < new Date()}
           date={selectedDate}
           onChange={(newValue) => {
             setSelectedDate(newValue);

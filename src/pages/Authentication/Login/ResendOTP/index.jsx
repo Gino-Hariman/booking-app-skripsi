@@ -3,7 +3,6 @@ import { Body } from "../../../../components/Typography";
 
 const ResendOTP = () => {
   const [counter, setCounter] = useState("90");
-  console.log("test");
 
   const onClick = () => {
     setCounter(90);

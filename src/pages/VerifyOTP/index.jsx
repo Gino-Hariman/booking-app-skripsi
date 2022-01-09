@@ -7,18 +7,24 @@ import OTPInput from "../../components/OTPInput";
 import { Body, H1 } from "../../components/Typography";
 import usePOST from "../../hooks/usePOST";
 import ResendOTP from "../Authentication/Login/ResendOTP";
+import useAuth from "../../hooks/useAuth";
+import Loading from "../../components/Loading";
 
 const VerifyOTP = ({ studentName = "" }) => {
   const navigation = useNavigate();
   const { state } = useLocation();
   const [inputData, setInputData] = useState("");
+  const { login } = useAuth();
 
   const { handlePOST, isPOSTING } = usePOST({
     path: verifOTP,
     callback: (res) => {
+      console.log("ress", res);
       if (res?.type === "success") {
-        localStorage.setItem("login_token", res?.loginToken);
-        navigation("/");
+        // localStorage.setItem("login_token", res?.loginToken);
+        login(res?.loginToken).then(() => {
+          navigation(state?.path || "/");
+        });
       }
     },
     errorCallback: (err) => console.log("erro00", err),
@@ -32,6 +38,8 @@ const VerifyOTP = ({ studentName = "" }) => {
       });
     }
   };
+
+  if (isPOSTING) return <Loading />;
 
   return (
     <DualLayout>

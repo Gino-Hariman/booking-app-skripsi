@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 import ChairSection from "./ChairSection";
+import useGET from "../../../../../hooks/useGET";
+import Loading from "../../../../../components/Loading";
 
-const ChairForm = ({ onChange }) => {
+const ChairForm = ({ values, onChange }) => {
   const [selectedChair, setSelectedChair] = useState();
+
+  const { data: tables, isFetching } = useGET({
+    path: `/table?id_lokasi=${values?.spotId}`,
+  });
 
   const handleSelect = (chair) => {
     setSelectedChair(chair);
     onChange(chair);
   };
 
-  console.log(selectedChair, selectedChair);
+  if (isFetching) return <Loading />;
 
   return (
     <>
-      <ChairSection
+      {tables.map((table) => (
+        <ChairSection
+          title={`At table ${table.nama_meja}`}
+          chairs={table?.kursi}
+          selected={selectedChair}
+          onSelect={handleSelect}
+        />
+      ))}
+      {/* <ChairSection
         title="At table AA"
         chairs={[
           { id: 1, name: "A1" },
@@ -30,7 +44,7 @@ const ChairForm = ({ onChange }) => {
         ]}
         selected={selectedChair}
         onSelect={handleSelect}
-      />
+      /> */}
     </>
   );
 };

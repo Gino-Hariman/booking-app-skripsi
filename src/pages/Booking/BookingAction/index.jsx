@@ -32,8 +32,9 @@ const BookingAction = () => {
   const [currStep, setCurrStep] = useState(0);
   const [values, setValues] = useState(() => {
     const state = location.state;
+    console.log("state", state);
     return {
-      location: state?.selectedLocation,
+      spotId: state?.spotId,
     };
   });
 
@@ -43,16 +44,21 @@ const BookingAction = () => {
     setValues((curr) => ({ ...curr, [form.id]: value }));
 
   const handleSubmit = () => {
-    if (currStep + 1 < STEPS.length) return setCurrStep((curr) => curr + 1);
+    if (currStep + 1 < STEPS.length) {
+      console.log("opps");
+
+      return setCurrStep((curr) => curr + 1);
+    }
+
     // do submission
-    return navigate("processing", { replace: true });
+    return navigate("/processing", { replace: true });
   };
 
   return (
     <ActionForm
       title={form.title}
       actionName={form.actionName}
-      form={<form.form onChange={handleChange} />}
+      form={<form.form values={values} onChange={handleChange} />}
       onActionSubmit={handleSubmit}
       submitDisabled={!values[form.id]}
     />

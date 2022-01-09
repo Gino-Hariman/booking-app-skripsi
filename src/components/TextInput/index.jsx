@@ -11,7 +11,7 @@ const TextInput = ({ setInputData }) => {
         onChange={onChange}
         type="email"
         id="email"
-        placeholder="NIM UPH kamu"
+        placeholder="Email UPH kamu"
       />
     </TextInputContainer>
   );

@@ -3,7 +3,7 @@ import { LoginButtonContainer, LoginButtonText } from "./styles";
 
 const LoginButton = ({ onClick }) => {
   return (
-    <LoginButtonContainer onClick={onClick}>
+    <LoginButtonContainer>
       <LoginButtonText>Login</LoginButtonText>
     </LoginButtonContainer>
   );

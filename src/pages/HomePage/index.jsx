@@ -11,26 +11,31 @@ import Loading from "../../components/Loading";
 const HomePage = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
-
-  useEffect(() => {
-    if (!localStorage.getItem("login_token")) return navigate("/login");
-  }, []);
-
+  // useEffect(() => {
+  //   if (!localStorage.getItem("login_token")) return navigate("/login");
+  // }, []);
   const { data, isFetching } = useGET({
     path: "/lantai",
     errorCallback: (err) => console.log("err", err),
   });
+  // console.log(
+  //   'localStorage.getItem("login_token")',
+  //   localStorage.getItem("login_token")
+  // );
 
-  console.log(
-    'localStorage.getItem("login_token")',
-    localStorage.getItem("login_token")
-  );
+  const a = localStorage.getItem("login_token");
+  console.log("token", a);
   const handleSelect = (item) => {
     console.log("item", item);
 
     if (localStorage.getItem("login_token")) {
       console.log("masuk");
-      return navigate("/booking", { state: { selectedLocation: item } });
+      // return navigate("/booking", { state: { selectedLocation: item } });
+      return navigate("/spot", {
+        state: {
+          id: item.id_lantai,
+        },
+      });
     }
     return navigate("/login");
   };

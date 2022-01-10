@@ -9,7 +9,7 @@ const useAuth = () => {
   const laodedStorageData = async () => {
     try {
       const getToken = await localStorage.getItem("login_token");
-      if (getToken) {
+      if (JSON.parse(getToken)) {
         setAuthed(true);
       }
     } catch (err) {
@@ -35,10 +35,11 @@ const useAuth = () => {
   // }, []);
 
   const login = (token) => {
+    console.log("testing", token);
     return new Promise((res) => {
-      Promise.resolve(localStorage.setItem("login_token", token)).then(() =>
-        setAuthed(true)
-      );
+      Promise.resolve(
+        localStorage.setItem("login_token", JSON.stringify(token))
+      ).then(() => setAuthed(true));
       res();
     });
   };

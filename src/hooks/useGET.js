@@ -17,6 +17,7 @@ const useGET = ({
 }) => {
   const [data, setData] = useState(initial);
   const [isFetching, setIsFetching] = useState(initialFetchStatus);
+  const [token, setToken] = useState();
   const configRef = useRef(config);
   const errorCallbackRef = useRef();
   errorCallbackRef.current = errorCallback;
@@ -28,6 +29,9 @@ const useGET = ({
   useEffect(() => {
     const { CancelToken } = axios;
     const source = CancelToken.source();
+    const retrieveToken = localStorage.getItem("login_token");
+    setToken(JSON.parse(retrieveToken));
+
     setIsFetching(true);
     const fetchData = setTimeout(
       () =>
@@ -37,7 +41,7 @@ const useGET = ({
           config: {
             cancelToken: source.token,
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("login_token")}`,
+              Authorization: `Bearer ${token?.token}`,
             },
             ...configRef.current,
           },

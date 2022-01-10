@@ -23,8 +23,6 @@ const HomePage = () => {
   //   localStorage.getItem("login_token")
   // );
 
-  const a = localStorage.getItem("login_token");
-  console.log("token", a);
   const handleSelect = (item) => {
     console.log("item", item);
 

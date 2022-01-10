@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Loading from "../../components/Loading";
 import SpotCard from "../../components/SpotCard";
@@ -8,12 +8,17 @@ import { ListSpot } from "./styles";
 
 const Spot = () => {
   const location = useLocation();
+  const [token, setToken] = useState("");
+  useEffect(() => {
+    const retriveObj = localStorage.getItem("login_token");
+    setToken(JSON.parse(retriveObj));
+  }, []);
 
   const { data: spots, isFetching } = useGET({
     path: `/lokasi?id_lantai=${location.state.id}`,
     config: {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("login_token")}`,
+        Authorization: `Bearer ${token.token}`,
       },
     },
   });

@@ -22,7 +22,7 @@ const VerifyOTP = ({ studentName = "" }) => {
       console.log("ress", res);
       if (res?.type === "success") {
         // localStorage.setItem("login_token", res?.loginToken);
-        login(res?.loginToken).then(() => {
+        login({ token: res?.loginToken, nim: state?.nim }).then(() => {
           navigation(state?.path || "/");
         });
       }

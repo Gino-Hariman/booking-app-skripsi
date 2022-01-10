@@ -28,6 +28,7 @@ const Login = () => {
           state: {
             token: res?.token,
             path: state?.path,
+            nim: inputData,
           },
         });
       }

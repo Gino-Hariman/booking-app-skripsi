@@ -8,7 +8,7 @@ const SpotCard = ({ spotId, name, imgUrl }) => {
   const navigate = useNavigate();
 
   const handleClick = () =>
-    navigate("/booking", {
+    navigate(`/booking/${spotId}`, {
       state: {
         spotId,
       },

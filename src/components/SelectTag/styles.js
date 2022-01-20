@@ -7,6 +7,9 @@ const StyledSelect = styled.div.attrs({
 })`
   ${({ selected }) => (selected ? tw`bg-primary text-white` : tw`bg-white`)}
   cursor: pointer;
+
+  ${({ disabled }) =>
+    disabled ? tw`pointer-events-none border-black-10 text-black-10` : tw``}
 `;
 
 export default StyledSelect;

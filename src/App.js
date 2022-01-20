@@ -27,7 +27,7 @@ import Loading from "./components/Loading";
 const RequireAuth = ({ children }) => {
   const state = useAuth();
   const location = useLocation();
-  console.log("satesss", state.authed);
+
   return state.authed === true ? (
     children
   ) : (
@@ -61,7 +61,7 @@ const App = () => {
           <Route path="/verify-otp" element={<VerifyOTP />} />
           <Route path="/admin" element={<Admin />} />
           <Route
-            path="/booking"
+            path="/booking/:spotId"
             element={
               <RequireAuth>
                 <Booking />
